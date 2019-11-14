@@ -1,0 +1,108 @@
+<script src="/login/status"></script>
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>阿里百秀-发现生活，发现美!</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/vendors/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="assets/vendors/nprogress/nprogress.css">
+ 
+</head>
+<body>
+  <div class="wrapper">
+    <div class="topnav">
+      <ul>
+        <li><a href="javascript:;"><i class="fa fa-glass"></i>奇趣事</a></li>
+        <li><a href="javascript:;"><i class="fa fa-phone"></i>潮科技</a></li>
+        <li><a href="javascript:;"><i class="fa fa-fire"></i>会生活</a></li>
+        <li><a href="javascript:;"><i class="fa fa-gift"></i>美奇迹</a></li>
+      </ul>
+    </div>
+    <div class="header">
+      <h1 class="logo"><a href="index.html"><img src="assets/img/logo.png" alt=""></a></h1>
+      <ul class="nav">
+        
+      </ul>
+      <div class="search">
+        <form>
+          <input type="text" class="keys" placeholder="输入关键字">
+          <input type="submit" class="btn" value="搜索">
+        </form>
+      </div>
+    </div>
+    <div class="aside">
+      <div class="widgets">
+        <h4>搜索</h4>
+        <div class="body search">
+          <form>
+            <input type="text" class="keys" placeholder="输入关键字">
+            <input type="submit" class="btn" value="搜索">
+          </form>
+        </div>
+      </div>
+      <div class="widgets" id="newest">
+        <h4>随机推荐</h4>
+        <ul class="body random" id="randomRecommend">
+        
+        </ul>
+      </div>
+      <div class="widgets">
+        <h4>最新评论</h4>
+        <ul class="body discuz">
+        
+        </ul>
+      </div>
+    </div>
+    <div class="content" id="cnt">
+      
+      <div class="panel hots">
+        <h3>热门推荐</h3>
+        <ul id="hot">
+          
+        </ul>
+      </div>
+    </div>
+    <div class="footer">
+      <p>© 2016 XIU主题演示 本站主题由 themebetter 提供</p>
+    </div>
+  </div>
+</body>
+<script src="assets/vendors/jquery/jquery.js"></script>
+<script src="assets/vendors/nprogress/nprogress.js"></script>
+<script src="assets/js/template-web.js"></script>
+<script src="/assets/js/recommend.js"></script>
+<script src="/assets/js/detail.js"></script>
+<script type="text/html" id="articleTpl">
+
+  <div class="article">
+      <div class="breadcrumb">
+        <dl>
+          <dt>当前位置：</dt>
+          <dd><a href="javascript:;">{{category.title}}</a></dd>
+          <dd>{{title}}</dd>
+        </dl>
+      </div>
+      <h2 class="title">
+        <a href="javascript:;">{{content}}</a>
+      </h2>
+      <div class="meta">
+        <span>{{author.nickName}} 发布于 {{createAt.substring(0,10)}}</span>
+        <span>分类: <a href="javascript:;">{{category.title}}</a></span>
+        <a href="javascript:;" class="like">
+          <i class="fa fa-thumbs-o-up"></i>
+          <span>赞({{meta.likes}})</span>
+        </a>
+        <a href="javascript:;" class="stamp">
+            <i class="fa fa-thumbs-o-down"></i>
+            <span>踩({{meta.subtract}})</span>
+          </a>
+        <span>阅读: ({{meta.views}})</span>
+        <span>评论: ({{meta.comments}})</span>
+      </div>
+    </div>
+
+</script>
+</html>
